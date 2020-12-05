@@ -1,0 +1,41 @@
+body {
+  background-image: url("assets/imgs/poster_board_WEA_PEX_DRC_025_large__2400_px_.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+h1 {
+  font-size: 90px;
+  font-family: "Rye", cursive;
+  color: rgb(212, 0, 18);
+  text-align: center;
+  border: 4px solid black;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.616);
+}
+
+#heading {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: auto;
+}
+
+#heading img:last-child {
+  transform: scaleX(-1);
+}
+#buttonRow {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 4.5%;
+}
+#buttonRow input {
+  border-radius: 25px;
+  border: 5px solid #4f8307;
+}
+
+#buttonRow input:hover {
+  border: 5.3px solid rgb(212, 0, 18);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
+}
