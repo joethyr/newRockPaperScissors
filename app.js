@@ -1,5 +1,25 @@
+let pick = "";
 let userWin = 0;
 let computerWin = 0;
+
+function askName() {
+  pick = prompt("What is your name?").toUpperCase();
+  document.getElementById("outputName").innerHTML = pick;
+}
+askName();
+
+function playerRock() {
+  pick = "rock";
+  playerInput();
+}
+
+const imgButton1 = document.querySelector("#imgButton1");
+imgButton1.addEventListener("click", playerRock);
+const imgButton2 = document.querySelector("#imgButton2");
+imgButton2.addEventListener("click", playerPaper);
+const imgButton3 = document.querySelector("#imgButton3");
+imgButton3.addEventListener("click", playerScissors);
+
 // create scores for player and computer
 
 function computerPlay() {
@@ -13,19 +33,12 @@ function computerPlay() {
 // computer randomly picks
 
 function playerInput() {
-  let pick = prompt(
-    "Type in your choice: Rock, Paper, or Scissors?"
-  ).toLowerCase();
   let computerPick = computerPlay();
-  if (pick !== "rock" && pick !== "paper" && pick !== "scissors") {
-    alert("Wrong input!");
-    playerInput();
-  } else {
-    console.log(`you chose ${pick} .`);
-    alert(`Ok, you chose ${pick} .`);
-    playRound(pick, computerPick);
-  }
+  console.log(`you chose ${pick} .`);
+  alert(`Ok, you chose ${pick} .`);
+  playRound(pick, computerPick);
 }
+
 // Player picks
 
 function playRound(playerSelection, computerSelection) {
@@ -105,37 +118,3 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 // Function for gameplay single round.
-
-// function game() {
-//   for (let i = 0; i < 5; i++) {
-//     playerInput();
-//   }
-
-//   if (userWin > computerWin) {
-//     alert("You won! Congratulations!");
-//   } else if (computerWin > userWin) {
-//     alert("You lose, noob!");
-//   } else {
-//     alert("Tie!");
-//   }
-
-//   let again = confirm("Again?");
-
-//   if (again === true) {
-//     userWin = 0;
-
-//     computerWin = 0;
-
-//     game();
-//   } else {
-//     alert("Thanks for playing!");
-//   }
-// }
-
-// Function for 5 gameplay rock-paper-scissors.
-
-// game();
-
-// Execute the programs.
-
-// playerInput();
