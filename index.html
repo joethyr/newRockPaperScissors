@@ -3,57 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rock Paper Scissors!</title>
+    <title>Rock Paper Scissors Project</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Rye&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header id="heading">
-      <img
-        src="assets/imgs/tumblr_ozntl68Ipd1stwfi1o1_250.gif"
-        alt=""
-        srcset=""
-      />
-      <h1>Rock-Paper-Scissors</h1>
-      <img
-        src="assets/imgs/tumblr_ozntl68Ipd1stwfi1o1_250.gif"
-        alt=""
-        srcset=""
-      />
-    </header>
-    <h2>First to 5 Wins:</h2>
-    <div id="buttonRow">
+    <h1>Rock Paper Scissors</h1>
+    <h2>Now with DOM Manipulation! FIRST TO FIVE WINS</h2>
+
+    <div class="buttonRow">
       <input
         type="image"
-        id="imgButton1"
-        name="imgButton1"
-        src="assets/imgs/bttn1.jpeg"
-        alt="goron rock monster"
+        id="rock"
+        name="rock"
+        src="assets/imgs/img_rock.png"
+        alt="a cartoon closed fist"
       />
       <input
         type="image"
-        id="imgButton2"
-        name="imgButton2"
-        src="assets/imgs/bttn2.jpeg"
-        alt="dwight from the office, holding paper"
+        id="paper"
+        name="paper"
+        src="assets/imgs/img_paper.png"
+        alt="a cartoon flat hand"
       />
       <input
         type="image"
-        id="imgButton3"
-        name="imgButton3"
-        src="assets/imgs/bttn3.jpeg"
-        alt="young edward sicssorhand cosplayer"
+        id="scissors"
+        name="scissors"
+        src="assets/imgs/img_scissors.png"
+        alt="a cartoon hand making out a scissor."
       />
     </div>
-    <h2>
-      Score:
-      <span id="outputName"></span>
-      <span> CPU</span>
-    </h2>
+
+    <div class="score">
+      <div id="playerScore"></div>
+      <div id="cpuScore"></div>
+    </div>
+
+    <div class="scoreLabel">
+      <span>Player Score</span>
+      <span>CPU Score</span>
+    </div>
+
+    <div id="messagelabel">MESSAGE BOX:</div>
+
+    <div id="messageBox"></div>
+
+    <div>
+      <button id="reset">Play Again!</button>
+    </div>
   </body>
-  <script src="app.js"></script>
 </html>

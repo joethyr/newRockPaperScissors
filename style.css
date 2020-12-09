@@ -1,51 +1,68 @@
 body {
-  background-image: url("assets/imgs/poster_board_WEA_PEX_DRC_025_large__2400_px_.jpg");
-  background-size: cover;
-  background-attachment: fixed;
+  background-color: #7ec5bc;
+  font-family: "Press Start 2P", cursive;
 }
-
 h1 {
-  font-size: 90px;
-  font-family: "Rye", cursive;
-  color: rgb(212, 0, 18);
+  color: #454655;
   text-align: center;
-  border: 4px solid black;
-  border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.616);
 }
-
-#heading {
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-  height: auto;
+h2 {
+  color: #454655;
+  text-align: center;
 }
-
-#heading img:last-child {
-  transform: scaleX(-1);
-}
-#buttonRow {
+.buttonRow {
   display: flex;
   justify-content: space-evenly;
   margin-top: 4.5%;
-}
-#buttonRow input {
-  border-radius: 25px;
-  border: 5px solid #4f8307;
+  width: 100%;
+  height: 200px;
 }
 
-#buttonRow input:hover {
-  border: 5.3px solid rgb(212, 0, 18);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
-  transform: scale(1.05);
+.buttonRow input:hover {
+  transform: scale(1.1);
 }
 
-h2 {
-  font-size: 60px;
-  font-family: "Rye", cursive;
-  color: rgb(212, 0, 18);
-  border: 4px solid black;
-  border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.616);
+.scoreLabel {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.score {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.score div {
+  width: 100px;
+  height: 130px;
+  border: 7px solid #efc94a;
   text-align: center;
+  font-weight: bolder;
+  font-size: 20px;
+  margin-bottom: 12px;
+  background-color: #eae6cc;
+  border-radius: 1%;
+}
+
+#cpuScore {
+  margin-left: 55px;
+}
+#playerScore {
+  margin-left: 20px;
+}
+
+#messagelabel {
+  display: flex;
+  justify-content: center;
+}
+#messageBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 100px;
+  border: 5px solid rgb(27, 27, 31);
+  text-align: center;
+  font-weight: bolder;
+  font-size: 20px;
 }
