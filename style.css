@@ -1,6 +1,7 @@
 body {
   background-color: #7ec5bc;
   font-family: "Press Start 2P", cursive;
+  color: #454655;
 }
 h1 {
   color: #454655;
@@ -54,6 +55,7 @@ h2 {
 #messagelabel {
   display: flex;
   justify-content: center;
+  margin-top: 40px;
 }
 
 .messageContainer {
@@ -61,10 +63,32 @@ h2 {
   justify-content: center;
 }
 #messageBox {
-  width: 300px;
-  height: 100px;
-  border: 5px solid rgb(27, 27, 31);
+  width: 800px;
+  height: 130px;
+  border: 7px solid #efc94a;
+  background-color: #eae6cc;
   text-align: center;
   font-weight: bolder;
   font-size: 20px;
+}
+
+.buttonReset {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  font-family: inherit;
+  font-size: 1em;
+  width: 130px;
+  height: 80px;
+  text-align: center;
+  border: 7px solid #6e1511;
+  margin-top: 20px;
+  background-color: #e62c31;
+  color: #eae6cc;
+  cursor: pointer;
+}
+button:hover {
+  color: #454655;
 }
