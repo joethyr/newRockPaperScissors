@@ -9,6 +9,7 @@ const reset = document.querySelector("#reset");
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
+const messageBox = document.querySelector("#messageBox");
 
 function computerPlay() {
   const choice = ["rock", "paper", "scissors"];
@@ -23,104 +24,48 @@ function computerPlay() {
 startGame();
 
 function playRound(playerSelection, computerSelection) {
-  if (playerSelection == computerSelection) {
-    console.log(
-      `You threw out ${playerSelection} and Computer chooses ${computerSelection}, it's a tie!`
-    );
-    alert("DRAW!");
-  } else if (playerSelection == "rock" && computerSelection == "scissors") {
-    console.log(
-      `You went with ${playerSelection} and Computer commands with ${computerSelection}, you win!`
-    );
-    alert("YOU WIN THE ROUND!");
-    userWin++;
-  } else if (playerSelection === "rock" && computerSelection === "paper") {
-    console.log(
-      "You pick " +
-        playerSelection +
-        " and Computer pick " +
-        computerSelection +
-        ", you lose!"
-    );
-
-    alert("You lose!");
-
-    computerWin++;
-  } else if (playerSelection === "paper" && computerSelection === "rock") {
-    console.log(
-      "You pick " +
-        playerSelection +
-        " and Computer pick " +
-        computerSelection +
-        ", you win!"
-    );
-
-    alert("You win!");
-
-    userWin++;
-  } else if (playerSelection === "paper" && computerSelection === "scissors") {
-    console.log(
-      "You pick " +
-        playerSelection +
-        " and Computer pick " +
-        computerSelection +
-        ", you lose!"
-    );
-
-    alert("You lose!");
-
-    computerWin++;
-  } else if (playerSelection === "scissors" && computerSelection === "paper") {
-    console.log(
-      "You pick " +
-        playerSelection +
-        " and Computer pick " +
-        computerSelection +
-        ", you win!"
-    );
-
-    alert("You win!");
-
-    userWin++;
-  } else if (playerSelection === "scissors" && computerSelection === "rock") {
-    console.log(
-      "You pick " +
-        playerSelection +
-        " and Computer pick " +
-        computerSelection +
-        ", you lose!"
-    );
-
-    alert("You lose!");
-
-    computerWin++;
-  } else {
-    alert("Wrong input");
+  if (playerSelection == "rock") {
+    if (computerSelection == "rock") {
+      messageBox.textContent =
+        "You chose rock and the cpu chooses rock too!...Its a tie!!";
+    } else if (computerSelection == "paper") {
+      cpuScore.textContent = ++computerWin;
+      messageBox.textContent =
+        "You chose rock and the cpu chooses paper....Uh-oh. You Lose!";
+    } else {
+      playerScore.textContent == ++userWin;
+      messageBox.textContent =
+        "You chose rock and the cpu chooses scissors... Hey! YOU WINN!!";
+    }
+  } else if (playerSelection == "paper") {
+    if (computerSelection == "paper") {
+      messageBox.textContent =
+        "You chose paper and the cpu chooses paper too!...Its a tie!!";
+    } else if (computerSelection == "scissors") {
+      cpuScore.textContent = ++computerWin;
+      messageBox.textContent =
+        "You chose paper and the cpu chooses scissors....Uh-oh. You Lose!";
+    } else {
+      playerScore.textContent == ++userWin;
+      messageBox.textContent =
+        "You chose scissors and the cpu chooses rock... Hey! YOU WINN!!";
+    }
+  } else if (playerSelection == "scissors") {
+    if (computerSelection == "scissors") {
+      messageBox.textContent =
+        "You chose scissors and the cpu chooses scissors too!...Its a tie!!";
+    } else if (computerSelection == "rock") {
+      cpuScore.textContent = ++computerWin;
+      messageBox.textContent =
+        "You chose scissors and the cpu chooses rock....Uh-oh. You Lose!";
+    } else {
+      playerScore.textContent == ++userWin;
+      messageBox.textContent =
+        "You chose scissors and the cpu chooses paper... Hey! YOU WINN!!";
+    }
   }
 }
 // Function for gameplay single round.
-
-function checkWinner() {
-  if (compScore == 5 && playerScore == 5) {
-    roundResults.textContent = "The game is a Tie!";
-    roundResults.style.color = "blue";
-    buttonRow.forEach((input) => {
-      input.removeEventListener("click", getPlayerChoice);
-    });
-  } else if (compScore == 5) {
-    roundResults.textContent = "You Lost the game to a computer!";
-    roundResults.style.color = "red";
-    buttonRow.forEach((input) => {
-      input.removeEventListener("click", getPlayerChoice);
-    });
-  } else if (playerScore == 5) {
-    roundResults.textContent = "You Win the game!!!!";
-    roundResults.style.color = "green";
-    buttonRow.forEach((input) => {
-      input.removeEventListener("click", getPlayerChoice);
-    });
-  }
-}
 
 // Execute the programs.
 
