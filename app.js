@@ -24,45 +24,28 @@ function computerPlay() {
 startGame();
 
 function playRound(playerSelection, computerSelection) {
-  if (playerSelection == "rock") {
-    if (computerSelection == "rock") {
-      messageBox.textContent =
-        "You chose rock and the cpu chooses rock too!...Its a tie!!";
-    } else if (computerSelection == "paper") {
-      cpuScore.textContent = ++computerWin;
-      messageBox.textContent =
-        "You chose rock and the cpu chooses paper....Uh-oh. You Lose!";
-    } else {
-      playerScore.textContent == ++userWin;
-      messageBox.textContent =
-        "You chose rock and the cpu chooses scissors... Hey! YOU WINN!!";
-    }
-  } else if (playerSelection == "paper") {
-    if (computerSelection == "paper") {
-      messageBox.textContent =
-        "You chose paper and the cpu chooses paper too!...Its a tie!!";
-    } else if (computerSelection == "scissors") {
-      cpuScore.textContent = ++computerWin;
-      messageBox.textContent =
-        "You chose paper and the cpu chooses scissors....Uh-oh. You Lose!";
-    } else {
-      playerScore.textContent == ++userWin;
-      messageBox.textContent =
-        "You chose scissors and the cpu chooses rock... Hey! YOU WINN!!";
-    }
-  } else if (playerSelection == "scissors") {
-    if (computerSelection == "scissors") {
-      messageBox.textContent =
-        "You chose scissors and the cpu chooses scissors too!...Its a tie!!";
-    } else if (computerSelection == "rock") {
-      cpuScore.textContent = ++computerWin;
-      messageBox.textContent =
-        "You chose scissors and the cpu chooses rock....Uh-oh. You Lose!";
-    } else {
-      playerScore.textContent == ++userWin;
-      messageBox.textContent =
-        "You chose scissors and the cpu chooses paper... Hey! YOU WINN!!";
-    }
+  if (playerSelection == computerSelection) {
+    messageBox.textContent = `you chose and ${playerSelection} and the cpu chooses ${computerSelection}... Its a tie!`;
+  } else if (playerSelection == "rock" && computerSelection == "scissors") {
+    playerScore.textContent = ++userWin;
+    messageBox.textContent = `you chose and ${playerSelection} and the cpu chooses ${computerSelection}... you win!`;
+  } else if (playerSelection === "rock" && computerSelection === "paper") {
+    cpuScore.textContent = ++computerWin;
+    messageBox.textContent = `you chose and ${playerSelection} and the cpu chooses ${computerSelection}... you lose!`;
+  } else if (playerSelection === "paper" && computerSelection === "rock") {
+    playerScore.textContent = ++userWin;
+    messageBox.textContent = `you chose and ${playerSelection} and the cpu chooses ${computerSelection}... you win!`;
+  } else if (playerSelection === "paper" && computerSelection === "scissors") {
+    cpuScore.textContent = ++computerWin;
+    messageBox.textContent = `you chose and ${playerSelection} and the cpu chooses ${computerSelection}... you lose!`;
+  } else if (playerSelection === "scissors" && computerSelection === "paper") {
+    playerScore.textContent = ++userWin;
+    messageBox.textContent = `you chose and ${playerSelection} and the cpu chooses ${computerSelection}... you win!`;
+  } else if (playerSelection === "scissors" && computerSelection === "rock") {
+    cpuScore.textContent = ++computerWin;
+    messageBox.textContent = `you chose and ${playerSelection} and the cpu chooses ${computerSelection}... you lose!`;
+  } else {
+    messageBox.textContent = `wrong input!`;
   }
 }
 // Function for gameplay single round.

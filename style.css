@@ -37,7 +37,7 @@ h2 {
   width: 100px;
   height: 130px;
   border: 7px solid #efc94a;
-  text-align: center;
+  text-align: justify;
   font-weight: bolder;
   font-size: 20px;
   margin-bottom: 12px;
@@ -47,6 +47,7 @@ h2 {
 
 #cpuScore {
   margin-left: 55px;
+  font-size: 50px;
 }
 #playerScore {
   margin-left: 20px;
